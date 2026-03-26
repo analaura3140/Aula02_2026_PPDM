@@ -14,16 +14,21 @@ export default function Splash() {
 
 return (
     <View style={styles.container}>
-        <Text>Splash Screen</Text>
+        <Text style={styles.text}>My Fitness App</Text>
         <ActivityIndicator size="large" />
     </View>
 );
 }
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: "#ff6600",
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
     },
+
+    text: {
+        color: "#fff",
+    }
 });
 

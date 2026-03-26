@@ -1,6 +1,40 @@
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 
-export default function Layout() {
-  return <Stack screenOptions={{ headerShown: false}} />
+export default function TabLayout() {
+  return (
+    <Tabs
+    screenOptions={{
+      headerShown: false,
+      headerStyle: {
+        backgroundColor: "#ff6600"
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold"
+      }
+    }}
+    >
+      <Tabs.Screen
+      name="index"
+      options={{
+        title: "Home"
+      }}
+      />
 
+      <Tabs.Screen
+      name="perfil"
+      options={{
+        title: "Perfil"
+      }}
+      />
+
+      <Tabs.Screen
+      name="historico"
+      options={{
+        title: "Histórico"
+      }}
+      />
+      
+    </Tabs>
+  );
 }
